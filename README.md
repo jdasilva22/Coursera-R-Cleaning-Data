@@ -18,8 +18,8 @@ The Github directory contains the following files:
 
 
 The Github directory contains the following files:
-	tidydata.csv ---- contains a tidy data set, which is one of the outputs of the runanalysis() function
-	summarydata.csv --- the seond output from the runanalysis() function.  Uses the data set from tidydata to create an average for each variable for 			each activity and each subject 
+	tidydata.txt ---- contains a tidy data set, which is one of the outputs of the runanalysis() function
+	summarydata.txt --- the seond output from the runanalysis() function.  Uses the data set from tidydata to create an average for each variable for 			each activity and each subject 
 	CodeBook.md ---- a code book that describes the variables, the data, and the transformations that were peformed
 	run_analysis.R --- A script that transforms the "UCl HAR Daaset" into a tidy data set, and a second summarized data set. 
 	 
@@ -27,13 +27,13 @@ The run_analysis.R script contains the function runanalysis(optional x) which us
 	Function Inputs - x is an optional string arugment containing the directory location of the unzipped folder "UCI HAR Dataset".
 		If x is not suppled the file directory defaults to the R working directory.  The "UCl HAR Dataset" must be in the provided/working 				directory for the function to run properly. 		
 
-	The function writes two seperate csv files to the working/passed directory
-		File 1: "tidydata.csv" contains a data table that:
+	The function writes two seperate txt files to the working/passed directory
+		File 1: "tidydata.txt" contains a data table that:
 			1)Merges the training and the test sets to create one data set.
 			2)Extracts only the measurements on the mean and standard deviation for each measurement.
 			3)Uses descriptive activity names to name the activities in the data set
 			4)Appropriately labels the data set with descriptive variable names.
-  		File 2: "summarydata.csv" Using the data set from file 1, file 2 is a second independent csv file containing 
+  		File 2: "summarydata.txt" Using the data set from file 1, file 2 is a second independent txt file containing 
 			a tidy data set with the average of each variable for each activity and each subject.
 
 End of ReadMe File

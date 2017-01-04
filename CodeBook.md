@@ -27,7 +27,7 @@ The runanalysis() function in the run_analysis.R script takes an optional direct
 
 Variable names and descriptions are provided below for each of the two output files.
  
-File tidydata.csv
+File tidydata.txt
 
 Variable		Class-Description
 --------------	-----------------------
@@ -113,7 +113,7 @@ angleXgravityMean
 angleYgravityMean
 angleZgravityMean
 
-File summarydata.csv 
+File summarydata.txt
 Contains all of the same variables as in tidydata with the exception that activity_id and data_set variables are not included.  Also rather than listing each unique observation summarydata, simply provides the mean for each activity for each subject number 
 
 End of CodeBook.md

@@ -1,13 +1,13 @@
 ##runanalysis.R is a function used to clean, combine, and summarize the berkley accelerometer data
 ##Inputs - x is an optional string arugment containing the directory location of the unzipped folder "UCI HAR Dataset".
 ##         If x is not suppled the file directory defaults to the R working directory.		
-##Function writes two seperate csv files to the working/passed directory
-##  File 1: "tidydata.csv" contains a data table that:
+##Function writes two seperate txt files to the working/passed directory
+##  File 1: "tidydata.txt" contains a data table that:
 ##		1)Merges the training and the test sets to create one data set.
 ##		2)Extracts only the measurements on the mean and standard deviation for each measurement.
 ##		3)Uses descriptive activity names to name the activities in the data set
 ##		4)Appropriately labels the data set with descriptive variable names.
-##  File 2: "summarydata.csv" Using the data set from step 1, file 2 is a second independent csv file containing 
+##  File 2: "summarydata.txt" Using the data set from step 1, file 2 is a second independent txt file containing 
 ##		a tidy data set with the average of each variable for each activity and each subject.
 
 library(plyr)
@@ -78,7 +78,7 @@ runanalysis<-function(x){
 ##Writes files
 	print(c("Writing Files"))
 	flush.console()
-	write.csv(data,paste0(fileloc,"/tidydata.csv"),row.names=FALSE)
-	write.csv(data2,paste0(fileloc,"/summarydata.csv"),row.names=FALSE)
+	write.table(data,paste0(fileloc,"/tidydata.txt"),row.names=FALSE)
+	write.table(data2,paste0(fileloc,"/summarydata.txt"),row.names=FALSE)
 	print(c("Run Analysis Complete"))
 }
